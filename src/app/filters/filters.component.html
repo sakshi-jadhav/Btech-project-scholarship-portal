@@ -1,0 +1,73 @@
+<!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Apply Filters" style="width:50px">
+    <mat-icon>filter_alt</mat-icon> -->
+    <!-- <mat-label>Apply Filters</mat-label> -->
+    
+  <!-- </button> -->
+
+  <!-- <button mat-fab extended   [matMenuTriggerFor]="menu">
+    <mat-icon>filter_alt</mat-icon>
+    Apply Filters
+  </button> -->
+<!-- <button mat-icon-button><mat-icon>filter_alt</mat-icon> -->
+  <button mat-button [matMenuTriggerFor]="menu"><mat-icon>filter_alt</mat-icon>Apply Filters</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item >Caste</button>
+  <button mat-menu-item >Religion</button>
+  <!-- <button mat-menu-item [matMenuTriggerFor]="year">Year</button>
+  <button mat-menu-item [matMenuTriggerFor]="physicaly disabled">Physically </button> -->
+
+</mat-menu>
+
+<mat-menu #caste="matMenu">
+  <!-- <button mat-menu-item [matMenuTriggerFor]="sc">SC</button>
+  <button mat-menu-item [matMenuTriggerFor]="st">ST</button>
+  <button mat-menu-item [matMenuTriggerFor]="obc">OBC</button>
+  <button mat-menu-item>Birds</button>
+  <button mat-menu-item>Mammals</button> -->
+
+  <section class="example-section" [formGroup]="filters">
+    <!-- <h4>Select your toppings:</h4> -->
+    <!-- <p><mat-checkbox formControlName="sc">SC</mat-checkbox></p>
+    <p><mat-checkbox formControlName="st">ST</mat-checkbox></p>
+    <p><mat-checkbox formControlName="obc">OBC</mat-checkbox></p>
+    <p><mat-checkbox formControlName="sbc">SBC</mat-checkbox></p>
+    <p><mat-checkbox formControlName="ebc">EBC</mat-checkbox></p>
+    <p><mat-checkbox formControlName="vjnt">VJNT</mat-checkbox></p> -->
+
+  </section>
+</mat-menu>
+
+<mat-menu #religion="matMenu">
+  <button mat-menu-item></button>
+  <button mat-menu-item></button>
+  <button mat-menu-item></button>
+  <button mat-menu-item></button>
+  <button mat-menu-item></button>
+  <button mat-menu-item></button>
+  <button mat-menu-item></button>
+</mat-menu>
+
+<mat-menu #fish="matMenu">
+  <button mat-menu-item>Baikal oilfish</button>
+  <button mat-menu-item>Bala shark</button>
+  <button mat-menu-item>Ballan wrasse</button>
+  <button mat-menu-item>Bamboo shark</button>
+  <button mat-menu-item>Banded killifish</button>
+</mat-menu>
+
+<mat-menu #amphibians="matMenu">
+  <button mat-menu-item>Sonoran desert toad</button>
+  <button mat-menu-item>Western toad</button>
+  <button mat-menu-item>Arroyo toad</button>
+  <button mat-menu-item>Yosemite toad</button>
+</mat-menu>
+
+<mat-menu #reptiles="matMenu">
+  <button mat-menu-item>Banded Day Gecko</button>
+  <button mat-menu-item>Banded Gila Monster</button>
+  <button mat-menu-item>Black Tree Monitor</button>
+  <button mat-menu-item>Blue Spiny Lizard</button>
+  <button mat-menu-item disabled>Velociraptor</button>
+</mat-menu>
+
+  

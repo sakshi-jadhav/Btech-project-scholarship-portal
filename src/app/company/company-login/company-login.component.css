@@ -1,0 +1,57 @@
+.mat-mdc-form-field {
+  margin-top: 16px;
+  /* width: 100%; */
+}
+
+.login-container{
+  margin-left: 40%;
+  /* padding: ; */
+  width: fit-content;
+  background-color: #AAB7B8 ;
+}
+
+.mat-mdc-card{
+  background-color: #102C57;
+}
+
+.mat-mdc-button:not(:disabled) {
+  margin-left: 35%;
+  background-color: black;
+  color: white;
+  border: solid 1px white;
+  /* padding-left: 5px;
+  padding-right: 5px; */
+  width: 20%;
+/* margin-left: 40%; */
+}
+
+.form-container{
+  background-color: #102C57;
+  margin-left: 25%;
+  padding-left: 50px;
+  width: 50%;
+} 
+
+.mat-button-matStepperPrevious{
+  margin-left: 10px;
+}
+
+.login-container2{
+  margin-left: 32%;
+  /* padding: ; */
+  width: fit-content;
+ margin-top: 20px;
+ margin-bottom: 30px;
+}
+
+.h2{
+  background-color: white;
+  margin-left: 50%;
+  margin-top: auto;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.mat-mdc-card-title{
+  margin-left: 44%;
+  margin-top: 20px;
+}

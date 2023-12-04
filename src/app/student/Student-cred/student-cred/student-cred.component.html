@@ -1,0 +1,35 @@
+<div class="login-container">
+    <mat-card class="login-card">
+      <mat-card-title><h2>REGISTRATION</h2></mat-card-title>
+      <mat-card-content>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Username</mat-label>
+            <input matInput required name="username">
+          </mat-form-field>
+        </form>   
+
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput required [type]="hide ? 'password' : 'text'" name="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+        </form>  
+
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <mat-label>Confirm Password</mat-label>
+              <input matInput required [type]="hide ? 'password' : 'text'" name="confirm">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+          </form>   
+        <button mat-raised-button (click)="onBtnClick()" style="background-color: black;color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;" class="full-width">REGISTER</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

@@ -1,0 +1,254 @@
+<!-- <br>
+<mat-grid-list cols="3" rowHeight="2:1">
+    
+    <mat-grid-tile>
+        <h3>NOTICE BOARD</h3>
+
+        <br>
+                    <marquee behavior="scroll" direction="up" scrollamount="1" height="50">
+                      This is a scrolling text using the marquee tag.
+                      <br><br>
+                      This is a scrolling text using the marquee tag.
+                      <br><br>
+                      This is a scrolling text using the marquee tag.
+                      <br><br>
+                      This is a scrolling text using the marquee tag.
+                      <br><br>
+                      This is a scrolling text using the marquee tag.
+                      <br><br>
+                    </marquee>
+                    
+                    
+                  
+    </mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+  </mat-grid-list> -->
+
+<br>
+<br>
+<div>
+    <button class="scroll-to-top" (click)="scrollToTop()" [ngClass]="{'show': showScrollButton}">
+      <mat-icon>keyboard_arrow_up</mat-icon>
+    </button>
+   
+  <div>
+  <div class="card-grid">
+    <!-- <div class="card" *ngFor="let card of cards"> -->
+       
+        <!-- <h3>{{ card.title }}</h3>
+        <p>{{ card.description }}</p> -->
+        <div class="card" style="height: fit-content;width: 300px;margin-left: 20px;">
+            <h3>NOTICE BOARD</h3>
+        <marquee behavior="scroll"  direction="up" scrollamount="1" height="150" style="color: red;margin-left: 10px;">
+            <h4>
+            <ul>
+                <li>Mahabt forms are open</li>
+            <br>
+            <li>Post-Matrics scholarship forms are open</li>
+            <br>
+            <li>Deadline for Mahadbt is 30th Nov 2023</li>
+            <br>
+            <li>Scholarships are open oN NSP </li>
+            <br><br>
+            <li>Swadhar Scholarship forms will be opening soon</li>
+            </ul>
+            <br></h4>
+          </marquee>
+        
+    </div>
+    <div class="card" style="width: 710px;margin-left: 10px;height: 100%;">
+        <h3>SEARCH SCHOLARSHIPS</h3>
+        <mat-form-field class="example-form-field">
+            <mat-label>Search scholarship by name</mat-label>
+            <input matInput type="text" [(ngModel)]="searchTerm" >
+            
+           
+              <button matSuffix mat-icon-button>
+                <mat-icon>search</mat-icon>
+              </button>
+              </mat-form-field>
+
+              <!-- <input type="text" [(ngModel)]="searchTerm" placeholder="Search by scholarship name"> -->
+
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Deadline</th>
+                    <th>Apply</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- <tr *ngFor="let scholarship of scholarships"> -->
+                    <tr *ngFor="let scholarship of filterScholarships()">
+                    <td>{{ scholarship.name }}</td>
+                    <td>{{ scholarship.amount }}</td>
+                    <td>{{ scholarship.deadline }}</td>
+                    <td>{{ scholarship.link }}</td>
+                     
+                </tr>
+                  
+                </tbody>
+              </table>
+              <!-- <mat-paginator [length]="200" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page">
+            </mat-paginator> -->
+            <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>
+    </div>
+    <div class="card" style="width: 250px;margin-left: 20px;height: fit-content;">
+        <h3>IMPORTANT LINKS</h3>
+
+    <!-- <button class="dropbtn"><a routerLink="/admin-login" style="text-decoration:none;color: white;">Admin Corner</a></button> -->
+
+        <button mat-fab extended style="background-color: #ADC4CE;color: black;"><a routerLink="/eduloan" style="text-decoration:none;color: black;">
+            <mat-icon style="margin-left: -10px;">account_balance</mat-icon>
+            Apply for Education Loan
+        </a>
+          </button>
+          
+        <br>
+          <button mat-fab extended style="background-color: #ADC4CE;color: black;">
+            <mat-icon style="margin-left: -30px;">supervised_user_circle</mat-icon>
+            Donation Corner
+          </button>
+          <br>
+          
+          <button mat-fab extended style="background-color: #ADC4CE;color: black;"><a href="#work" style="text-decoration:none;color: black; width: 50px;">
+            <mat-icon style="margin-left: -19px;margin-top: 2px;">help</mat-icon>
+            How our portal works
+        </a>
+          </button>
+          <br>
+       
+        
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="working" id="work">
+  <div class="container3">
+    <section class="worksSection">
+      <h5>How it Works</h5> 
+      <p>Steps to successfully identify the most fitting scholarships</p>
+      <div class="BigBox">
+      <div class="box">
+        <img src="assets/register.jpg">
+        <h4>Register and create profile</h4>
+        <p>Provide some basic details super-quick and get registered with us.</p>
+      </div>
+      <div class="box">
+        <img src="assets/notification.jpg">
+       <h4>Get notified for matching scholarships</h4>
+       <p>Instant notification as soon as any scholarship matches your profile.</p>
+      </div>
+      <div class="box">
+        <img src="assets/apply.png">
+        <h4>Apply for scholarships</h4>
+        <p>Apply to the scholarships according to your need and eligibility.</p>
+      </div>
+      <div class="box">
+        <img src="assets/scholar.jpg">
+        <h4 style="justify-content:center">Become a scholar</h4>
+        <p>Kickstart your dreams by becoming a  scholar</p>
+      </div>
+      </div>
+
+      <div class='button' style="padding-top: 20px;padding-bottom: 20px;" >
+        <a routerLink="/stepper" style="text-decoration:none;color: white; padding-top: 10px;padding-bottom: 10px;">
+        <span style="text-decoration:none;color: white; padding-top: 10px;padding-bottom: 10px;">Register Now</span>
+        </a>
+      </div>
+     
+
+ 
+    </section>
+  </div>
+</div>
+<!-- <app-working></app-working> -->
+<!-- <div class="working" id="working">
+
+    <app-working></app-working>
+</div> -->
+<hr>
+<!-- <div id="a" class="aboutUs2" >
+
+<app-about></app-about>
+</div> -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="abt" id="abt">
+    <br>
+  <!-- <div id="a" class="aboutUs abt" style="background-color: #102C57;"><h1 style="background-color: #102C57;">ABOUT US</h1></div>
+
+    <div class="abt-text">
+      <p>
+          At our scholarship portal, we are on a mission to simplify the scholarship application process and make it more accessible for students from all walks of life. Our goal is to bridge the gap between deserving students and the life-changing opportunities that scholarships provide. We are dedicated to creating awareness and empowering students by sending timely alerts and notifications about available scholarships. We believe that every student deserves a chance to pursue their dreams, and we are here to help them navigate the path to higher education with ease.
+      </p>
+    </div>
+<br>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title text-center my-2">STUDENTS</h3>
+              <hr>
+              <p class="card-text my-2">We understand the frustration that comes with missing out on opportunities simply because they went unnoticed. Our platform provides a notification feature that does the hard work for you. Whenever a scholarship you qualify for is posted, we'll send you an alert. We're committed to simplifying the scholarship hunt, making sure you never miss a chance to fund your education and achieve your dreams</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title text-center my-2">SCHOLARSHIP PROVIDER</h3>
+              <hr>
+              <p class="card-text my-2">We are delighted to offer a set of new features. Scholarship providers can now conveniently register and post their scholarships on a single portal and access the list of applicants with a single click. Moreover, we've simplified the student verification process by coordinating with their colleges, ensuring a worry-free experience. Everything you need is at your fingertips on one user-friendly page, courtesy of our platform.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <app-about></app-about>
+    
+
+  <br>
+  <br>
+</div>
+<app-footer></app-footer>
+
+<script>
+    function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+    </script>
