@@ -1,0 +1,31 @@
+/* Example styles, you can modify these as needed */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+  }
+  
+  .card-header {
+    font-size: larger;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .card-body {
+    /* Body styles */
+  }
+  
+
+  .card {
+    /* Other card styles */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust the shadow color and strength as needed */
+    transition: box-shadow 0.3s ease-in-out; /* Add a transition for a smoother effect */
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Adjust the shadow on hover */
+  }
+  

@@ -1,0 +1,49 @@
+/* Style the header section */
+header {
+    background-color: #F3F0CA;
+    color: #000;
+    padding: 20px 0;
+    position: fixed;
+  }
+
+  .abt {
+    text-align: center;
+    margin: 3%;
+}
+
+.abt-text {
+    margin: 3% 20%;
+    align-content: center;
+    text-align: center;
+}
+  
+  /* Style the container within the header */
+  .container {
+    align-items: center;
+  }
+  
+  /* Style the logo image */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Style the h1 and h4 headings */
+
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  h4 {
+    font-size: 18px;
+  }
+  
+  /* Style the announcement text */
+  .announcementText {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  
+  

@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>OTP Verification</h1>
+    <div>
+      <label for="email">Enter your email:</label>
+      <input type="text" id="email" [(ngModel)]="email" placeholder="Email" />
+      <button (click)="generateOTP()">Generate OTP</button>
+    </div>
+    <div *ngIf="validationMessage">
+      <p>{{ validationMessage }}</p>
+    </div>
+    <div *ngIf="validationMessage === 'OTP sent to your email. Please check your inbox.'">
+      <label for="otp">Enter OTP:</label>
+      <input type="text" id="otp" [(ngModel)]="userOTP" placeholder="OTP" />
+      <button (click)="verifyOTP()">Verify OTP</button>
+    </div>
+  </div>
+  

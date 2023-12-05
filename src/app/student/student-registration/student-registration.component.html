@@ -1,0 +1,291 @@
+<!-- <app-heading></app-heading> -->
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<div class="body"></div>
+<div class="text" >
+<h2> General  Information </h2></div>
+
+<div class="form-container">
+    
+    <mat-form-field class="form-group">
+      <mat-label>Full Name</mat-label>
+ 
+      <input matInput type="text" name="fullname"required >
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <mat-label>Father's Name</mat-label>
+      <input matInput type="text" name="fname"required>
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <mat-label>Mother's Name</mat-label>
+      <input matInput type="text" name="mname"required>
+    </mat-form-field>
+
+       <!-- <mat-form-field class="form-group">
+      <mat-label>Aadhaar Number</mat-label>
+      <input matInput type="text" name="aadhaarNumber"required>
+    </mat-form-field> -->
+
+    <mat-form-field class="form-group" style="margin-left: 5px;">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. abcd@example.com" name="email">
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <mat-label>Telephone</mat-label>
+      <span matPrefix style="padding-left: 10px;">+91 &nbsp;</span>
+      <input type="tel" matInput placeholder="xxx-xxx-xxxx" name="contactNumber" required>
+      <!-- <mat-icon matSuffix>edit</mat-icon> -->
+
+
+    </mat-form-field>
+
+    <mat-form-field class="form-group" style="height:min-content">
+      <mat-label>Date of Birth</mat-label>
+      <input matInput [matDatepicker]="datepicker" name="datePicker" placeholder="MM/DD/YYYY" required>
+      <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+      <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+      <mat-datepicker #datepicker>
+        <mat-datepicker-actions>
+          <button mat-button matDatepickerCancel>Cancel</button>
+          <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+        </mat-datepicker-actions>
+      </mat-datepicker>
+    </mat-form-field>
+    
+    <mat-form-field class="form-group">
+      <mat-label>Annual Income</mat-label>
+      <input matInput type="text" name="annualIncome"required>
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <mat-label>Category</mat-label>
+      <input matInput type="text" name="category"required >
+    </mat-form-field>
+    
+    <!-- <mat-form-field class="form-group">
+      <mat-label>Category</mat-label>
+      <input matInput type="text" name="category"required >
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <mat-label>Category</mat-label>
+      <input matInput type="text" name="category"required >
+    </mat-form-field> -->
+
+    <div class="form-group">
+      <!-- <mat-label>Gender</mat-label>
+
+      <input type="radio" id="female" name="gender" value="Female" >
+      <label for="female" style="margin-left: 5px;">Female</label>
+      <input type="radio" id="male" name="gender" value="Male"style="margin-left: 20px;">
+      <label for="male" style="margin-left: 5px;">Male</label>
+      <input type="radio" id="other" name="gender" value="Other"style="margin-left: 20px;">
+      <label for="other" style="margin-left: 5px;">Other</label> -->
+      <!-- <mat-radio-group aria-label="Gender"><mat-label>Gender</mat-label>
+        <br>
+        <mat-radio-button value="f">Female</mat-radio-button>
+        <mat-radio-button value="m">Male</mat-radio-button>
+        <mat-radio-button value="o">Other</mat-radio-button>
+
+      </mat-radio-group> -->
+
+    </div>
+    
+  </div>
+ <!--//////////////////////////////////////////////////////////////////// -->
+
+ <div class="text" >
+  <h2> Academic  Information </h2></div>
+  <div class="form-container1" style="justify-content: space-evenly;">
+    
+  <mat-form-field class="form-group" style=" height: fit-content;margin-left:initial;">
+    <mat-label>Select Institute</mat-label>
+    <mat-select required style="margin-left: 2px;">
+      <mat-option value="option1">MKSSS's Cummins College Of Engineering for Women, Pune</mat-option>
+    </mat-select>
+  </mat-form-field>
+ 
+  <mat-form-field class="form-group">
+    <mat-label>Admission/Registration no./Enrollment</mat-label>
+    <input matInput type="text" name="enrollmentNo"required>
+  </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <mat-label>Admission Year</mat-label>
+      <input matInput type="text" name="admissionYear "required>
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <mat-label>Roll No.</mat-label>
+      <input matInput type="text" name="rollNo" required>
+    </mat-form-field>
+
+    <!-- <div class="form-group">
+      <div class="label">Division</div>
+      <input class="input" type="text" placeholder="Input 3">
+    </div> -->
+
+    <mat-form-field name="currentYear" style="height: fit-content;margin-left: 1px;align-items: flex-start;" class="form-group">
+      <mat-label>Current Year</mat-label>
+      <mat-select required>
+        <mat-option value="option1">First Year</mat-option>
+        <mat-option value="option2">Second Year</mat-option>
+        <mat-option value="option3">Third Year</mat-option>
+        <mat-option value="option4">Final Year</mat-option>
+
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <mat-label>Division (Optional)</mat-label>
+      <input matInput type="text" name="division"  >
+    </mat-form-field>
+
+    <mat-form-field name="board10" style="height: fit-content;margin-left: 1px;align-items: flex-start;" class="form-group">
+      <mat-label>10th Board</mat-label>
+      <mat-select required>
+        <mat-option value="option1">CBSE</mat-option>
+        <mat-option value="option2">ICSE</mat-option>
+        <mat-option value="option3">State Boards</mat-option>
+        <mat-option value="option4">NIOS</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <mat-label>10th Percentage (don't type %)</mat-label>
+      <input matInput type="text" name="percentage10"  >
+    </mat-form-field>
+
+    <mat-form-field name="board2" style="height: fit-content;margin-left: 1px;align-items: flex-start;" class="form-group">
+      <mat-label>12th / Diploma</mat-label>
+      <mat-select required>
+        <mat-option value="option1">12th</mat-option>
+        <mat-option value="option2">Diploma</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <mat-label>Board (Specify)</mat-label>
+      <input matInput type="text" name="board12"  >
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <mat-label>Percentage (don't type %)</mat-label>
+      <input matInput type="text" name="percentage12"  >
+    </mat-form-field>
+
+    
+
+    <!-- <div class="form-group">
+      <div class="label">Present Course</div>
+      <input class="input" type="text" placeholder="Input 4">
+    </div> -->
+<!-- 
+    <div class="form-group">
+      <div class="label">Current Year</div>
+      <input class="input" type="text" placeholder="Input 5">
+    </div> -->
+
+    <!-- <div class="form-group">
+      <div class="label">10th Board</div>
+      <input class="input" type="text" placeholder="Input 5">
+    </div>
+
+    <div class="form-group">
+      <div class="label">10th Roll No.</div>
+      <input class="input" type="text" placeholder="Input 6">
+    </div>
+
+    <div class="form-group">
+      <div class="label">12th Board</div>
+      <input class="input" type="text" placeholder="Input 7">
+    </div>
+
+    <div class="form-group">
+      <div class="label">12th Roll No.</div>
+      <input class="input" type="text" placeholder="Input 8">
+    </div> -->
+  </div>
+
+
+  <!-- ///////////Other Details//////////////////////////////////////////////////////////////////////// -->
+<div>
+  <div class="text" >
+    <h2> Other Details </h2></div>
+    <div class="form-container" style="height:fit-content">
+      
+        <!-- <div class="form-group">
+          <div class="label">Is Orphan</div>
+          <input class="input" type="text" placeholder="Input 1">
+        </div>
+    
+        <div class="form-group">
+          <div class="label">Is Disabled</div>
+          <input class="input" type="text" placeholder="Input 2">
+        </div>
+    
+        <div class="form-group">
+          <div class="label">Disability Identification Type</div>
+          <input class="input" type="text" placeholder="Input 2">
+        </div>
+    
+        <div class="form-group">
+          <div class="label">Type of Disability</div>
+          <input class="input" type="text" placeholder="Input 3">
+        
+          <div class="label" style="margin-left: 95px;">Martial Status</div>
+          <input class="input" type="text" placeholder="Input 4">
+        </div> -->
+        <mat-form-field name="orphan" style="height: fit-content;margin-left: 1px;align-items: flex-start;" class="form-group">
+          <mat-label>Is Orphan?</mat-label>
+          <mat-select required>
+            <mat-option value="option1">Yes</mat-option>
+            <mat-option value="option2">No</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="form-group">
+          <mat-label>Marital Status</mat-label>
+          <input matInput type="text" name="maritalStatus" required >
+        </mat-form-field>
+
+        <mat-form-field name="disabled" style="height: fit-content;margin-left: 1px;align-items: flex-start;" class="form-group">
+          <mat-label>Is Disabled??</mat-label>
+          <mat-select required>
+            <mat-option value="option1">Yes</mat-option>
+            <mat-option value="option2">No</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="form-group">
+          <mat-label>Disability Identification Type</mat-label>
+          <input matInput type="text" name="type" required placeholder="Type NA if not applicable">
+        </mat-form-field>
+
+        <!-- <mat-form-field class="form-group">
+          <mat-label></mat-label>
+          <input matInput type="text" name="" required >
+        </mat-form-field> -->
+        <br>
+        <br>
+        <br>
+        <br>
+        
+      </div>
+      <br>
+      <button mat-raised-button  style="background-color: black;color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;" class="full-width">REGISTER</button>
+
+      <br>
+      <br>
+
+
+</div>

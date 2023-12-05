@@ -1,0 +1,102 @@
+
+<br><br>
+    <div class="information" >
+        <div class="info"  [ngClass]="{ 'blur': isBlurred }">
+    
+            <div class="card">
+                        <div class="card-header">
+      <!-- Header content -->
+      <h1>Welcome to [Scholarship Portal Name] - Empowering Futures through Education</h1>
+      <!-- <hr>  -->
+    </div>
+    <div class="card-body">
+      <!-- Body content -->
+      <h3> At [Scholarship Portal Name], we believe that education is the cornerstone of progress and individual success. Our platform is committed to facilitating access to quality education by bridging the financial gap through scholarships and tailored education loan opportunities.
+        
+        <!-- <button (click)="toggleCurtainMenu()">View more info</button> -->
+        <button mat-fab extended style="background-color: #102C57;color: white; margin-left: 80%;" (click)="toggleCurtainMenu()">
+            <mat-icon style="margin-left: -10px;">arrow_right_alt</mat-icon>
+            View more info
+        </button>
+    </h3>
+    
+    </div>
+  </div>
+  
+
+
+
+  <div class="card">
+    <div class="card-header">
+        Our Motive
+      <!-- Header content -->
+    </div>
+    <div class="card-body">
+      <!-- Body content -->
+      <h3>
+        <ul><li> Empowering Access: We strive to empower individuals from diverse backgrounds to access educational opportunities that might otherwise seem out of reach due to financial constraints.
+        </li>
+        <br>
+        <li>Fostering Talent: Our primary goal is to foster talent by providing financial support to deserving candidates, enabling them to pursue their academic aspirations without financial stress.
+        </li>
+    </ul>
+</h3>
+    </div>
+  </div>
+  
+
+
+  <div class="card">
+    <div class="card-header">
+      <!-- Header content -->
+      How It Works
+    </div>
+    <div class="card-body">
+      <!-- Body content -->
+      <h3><ul><li>Scholarship Eligibility: Students registered on our platform automatically gain eligibility to apply for education loans provided by our partner financial institutions.
+    </li>
+    <br>
+    <li>
+        Loan Application: Once eligible, students can access information about the education loan offerings through our website. Detailed information about loan terms, application procedures, and required documentation is readily available.
+    </li>
+    <br>
+    <li>
+        Support and Guidance: Our dedicated team provides guidance and assistance to students throughout the loan application process. We ensure that students have a clear understanding of the terms and conditions before proceeding.
+    </li>
+    <br>
+</ul>
+</h3>
+    </div>
+  </div>
+  
+
+  <div class="card">
+    <div class="card-header">
+      <!-- Header content -->
+      Our Commitment
+    </div>
+    <div class="card-body">
+      <!-- Body content -->
+      <h3>
+        At [Scholarship Portal Name], we are committed to supporting students in their educational pursuits. We aim to break down financial barriers, enabling aspiring individuals to achieve their academic dreams and contribute meaningfully to society. 
+    </h3>
+    </div>
+  </div>
+</div>
+</div>
+<app-footer></app-footer>
+<div class="curtain-menu" [ngClass]="{ 'open': isOpen }" >
+    <div class="menu-content">
+      
+    </div>
+    <div class="menu-toggle" style="text-align: center; position: relative;background-color: #102C57;">
+        <span style="position: absolute; top: 0; right: 0;color: red;height: fit-content;" (click)="toggleMenu()" >&#10006;&ensp;</span>
+        <span><h1>Eligibility Criteria</h1></span>
+        <hr>
+        
+      </div>
+      <br>
+      <app-trial></app-trial>
+      <!-- <app-education></app-education> -->
+  </div>
+  

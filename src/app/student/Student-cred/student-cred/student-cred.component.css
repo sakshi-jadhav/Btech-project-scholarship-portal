@@ -1,0 +1,44 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: fit-content;
+  margin-top: 5%;
+}
+
+.login-card {
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  background-color: #427D9D;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+.h2{
+  margin-bottom: 2%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:white;
+}
+
+.example-form{
+  margin-top:5%;
+  width: 100%;
+}
+
+.example-full-width{
+  width: 100%;
+ 
+}
+
+.button{
+  /* background-color: #102C57; */
+  background-color: black;
+}
+
+.mat-mdc-card-title{
+  color: white;
+}
